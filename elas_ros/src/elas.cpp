@@ -82,11 +82,19 @@ public:
     local_nh.param<bool>("subsampling", subsampling, 0);
 
     // Topics
+    // std::string stereo_ns = nh.resolveName("stereo");
+    // std::string left_topic = ros::names::clean(stereo_ns + "/left/" + nh.resolveName("image"));
+    // std::string right_topic = ros::names::clean(stereo_ns + "/right/" + nh.resolveName("image"));
+    // std::string left_info_topic = stereo_ns + "/left/camera_info";
+    // std::string right_info_topic = stereo_ns + "/right/camera_info";
+
+    // Topics
     std::string stereo_ns = nh.resolveName("stereo");
-    std::string left_topic = ros::names::clean(stereo_ns + "/left/" + nh.resolveName("image"));
-    std::string right_topic = ros::names::clean(stereo_ns + "/right/" + nh.resolveName("image"));
-    std::string left_info_topic = stereo_ns + "/left/camera_info";
-    std::string right_info_topic = stereo_ns + "/right/camera_info";
+    std::string left_topic = ros::names::clean(stereo_ns + "/camera_color_left/" + nh.resolveName("image"));
+    std::string right_topic = ros::names::clean(stereo_ns + "/camera_color_right/" + nh.resolveName("image"));
+    std::string left_info_topic = stereo_ns + "/camera_color_left/camera_info";
+    std::string right_info_topic = stereo_ns + "/camera_color_right/camera_info";
+
 
     image_transport::ImageTransport it(nh);
     left_sub_.subscribe(it, left_topic, 1, transport);

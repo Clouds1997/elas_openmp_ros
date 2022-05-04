@@ -4,6 +4,7 @@ set(CMAKE_BUILD_TYPE Release)
 
 find_package(catkin REQUIRED COMPONENTS
   libelas
+  # libelas_gpu
   roscpp
   sensor_msgs
   stereo_msgs
