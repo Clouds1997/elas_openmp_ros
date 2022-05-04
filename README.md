@@ -18,7 +18,12 @@ git clone git@github.com:jeffdelmerico/cyphy-elas-ros.git
 Then build the `libelas` and `elas_ros` packages:
 
 ```
-catkin build 
+catkin_make_
 ```
 
-An example launch file is provided in ``elas_ros/launch/elas.launch``. 
+An example launch file is provided in 
+```
+elas_ros/launch/elas.launch
+```
+
+说实话效果就那样，还是得上个深度学习
