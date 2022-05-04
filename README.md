@@ -2,6 +2,8 @@
 
 ROS packages containing a wrapper for libelas, a stereo matching library. 
 
+用了openmp加速，好像就快那么一丢丢
+
 Most of this code is the original work of Patrick Ross <<patrick.ross@connect.qut.edu.au>>, Andreas Geiger <<geiger@kit.edu>>, Ben Upcroft <<ben.upcroft@qut.edu.au>>, and David Ball <<david.ball@qut.edu.au>>; see http://www.ros.org/wiki/cyphy_elas_ros for more information.
 
 The original repository that this was forked from no longer exists, so I'll do my best to maintain this one.  Thanks to [@nicolapiccinelli](https://github.com/nicolapiccinelli), [@comkieffer](https://github.com/comkieffer), and [@heimsi](https://github.com/heimsi) for their help in bringing this package up to date.
